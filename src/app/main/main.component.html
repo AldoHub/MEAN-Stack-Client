@@ -1,0 +1,22 @@
+<div class="banner"></div>
+<header>
+    <h1>Mean <br/> Posts</h1>
+</header>
+
+<section class="posts">
+    <div class="post" *ngFor="let post of posts | async">
+        <p class="title"><strong>{{post.title}}</strong></p>
+        <a [routerLink]="[ '/post', post._id ]">
+            <div class="cover" [ngStyle]="{'background-image': 'url('+ post.cover +')'}"></div>
+        </a>
+    </div>
+
+
+
+    <nav>
+        <ul class="pagination"> 
+          <li *ngFor="let index of totalCount" class="page-item"><a class="page-link" href="#" (click)="getNextPosts($event, index)">{{index}}</a></li>
+         
+        </ul>
+    </nav>
+</section>

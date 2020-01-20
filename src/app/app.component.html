@@ -1,0 +1,13 @@
+<div class="container">
+  <nav>
+      <ul>
+        <li><a routerLink="/"><strong>MEAN Stack</strong></a></li>
+      </ul>
+      <ul>
+        <li *ngIf="addItem"><a routerLink="/addpost">new post &#8594;</a></li>
+      </ul>
+  </nav>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

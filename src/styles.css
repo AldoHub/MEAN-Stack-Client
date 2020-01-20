@@ -1,0 +1,306 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #f4f5f8;
+    overflow-x: hidden;
+    font-family: "Poppins";
+    color: #444;
+}
+
+
+nav, header, main {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+}
+
+nav ul:first-of-type li a {
+    font-size: 20px;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+nav ul:last-of-type li a {
+  background: rgb(94, 157, 252);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: #eee;
+}
+
+header {
+    position: relative;
+    height: 550px;
+}
+
+header h1 {
+    font-size: 180px;
+    margin-top: 120px;
+    margin-left: 80px;
+    line-height: 180px;
+    color: rgb(94, 157, 252);
+}
+header h1::after{
+    content: "";
+    width: 25%;
+    height: 6px;
+    position: absolute;
+    bottom: 180px;
+    left: -120px;
+    background: rgb(94, 157, 252);
+    display: block;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.banner {
+    background: url("https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80") 100% 15% ;
+    height: 700px;
+    width: 80%;
+    background-size: 100%;
+    min-width: 300px;
+    position: absolute;
+    top: 0px;
+    right: 0%;
+    z-index: -1;
+}
+
+.posts {
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post {
+    width: 30%;
+    min-width: 300px;
+}
+
+.post a > .cover {
+    height: 400px;
+    background-size: cover !important;
+}
+
+
+.edit {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  
+  .postContainer {
+      margin-top: 120px;
+      margin-bottom: 120px;;
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .postContainer img {
+      width: 100%;
+      max-width: 500px;
+      margin-right: 40px;;
+  }
+  
+  .postContainer .content {
+      width: 40%;
+  }
+  
+  .loaderContainer{
+    text-align: center;
+    margin-top: 40vh;
+  }
+
+
+.editPanel {
+    overflow-y: scroll;
+    background: rgba(0, 24, 48, 0.9);
+    z-index: 2;
+    display: block;
+    height:100vh;
+    top: 0px;
+    text-align: center;
+    color: #eee;
+    position: fixed;
+    width: 100%;
+    margin: 0% auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
+}
+
+.editPanel form, form {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    padding: 120px 0px;
+}
+
+.editPanel form *, form * {
+    display: block;
+    width: 100%;
+
+}
+
+.editPanel form input, .editPanel form textarea,  form input,  form textarea{
+    margin-bottom: 20px;
+    border: none;
+    background: none;
+    
+}
+
+.editPanel form input[type="text"], .editPanel form textarea, form input[type="text"], form textarea{
+    background: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.editPanel form textarea {
+    height: 300px;
+    font-family: "Poppins";
+    resize: none;
+}
+button {
+    cursor: pointer;
+}
+
+.panelButton, .delete {
+  border: none;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.delete {
+  background: rgba(0, 28, 56, 0.9);
+  margin-top: 400px;
+  margin-bottom: 40px;
+  color: rgba(39, 100, 161, 0.9);
+}
+
+.panelButton {   
+  background: rgba(20, 20, 20, 0.9); 
+  font-weight: bold;
+  color: #eee;
+}
+
+
+form input[type="submit"]{
+    background: rgb(38, 113, 224);
+    width: 70%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    color: #d6d6d6;
+    font-weight: bold;
+    margin: 40px auto;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .lds-grid {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+    }
+    .lds-grid div {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: rgb(14, 207, 255);
+      animation: lds-grid 1.2s linear infinite;
+    }
+    .lds-grid div:nth-child(1) {
+      top: 6px;
+      left: 6px;
+      animation-delay: 0s;
+    }
+    .lds-grid div:nth-child(2) {
+      top: 6px;
+      left: 26px;
+      animation-delay: -0.4s;
+    }
+    .lds-grid div:nth-child(3) {
+      top: 6px;
+      left: 45px;
+      animation-delay: -0.8s;
+    }
+    .lds-grid div:nth-child(4) {
+      top: 26px;
+      left: 6px;
+      animation-delay: -0.4s;
+    }
+    .lds-grid div:nth-child(5) {
+      top: 26px;
+      left: 26px;
+      animation-delay: -0.8s;
+    }
+    .lds-grid div:nth-child(6) {
+      top: 26px;
+      left: 45px;
+      animation-delay: -1.2s;
+    }
+    .lds-grid div:nth-child(7) {
+      top: 45px;
+      left: 6px;
+      animation-delay: -0.8s;
+    }
+    .lds-grid div:nth-child(8) {
+      top: 45px;
+      left: 26px;
+      animation-delay: -1.2s;
+    }
+    .lds-grid div:nth-child(9) {
+      top: 45px;
+      left: 45px;
+      animation-delay: -1.6s;
+    }
+    @keyframes lds-grid {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    .page-item .page-link {
+      display: block;
+      background: rgb(94, 157, 252);
+      padding: 5px;
+      width: 30px;
+      color: #eee;
+      height: 30px;
+      border-radius: 4px;
+      text-align: center;  
+    }
+  
+    
+    .pagination {
+      display: flex;
+    }
